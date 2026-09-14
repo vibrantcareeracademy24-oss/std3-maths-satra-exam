@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, "Noto Sans Gujarati", sans-serif;
+    background: #f3f6fb;
+    color: #172033;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #1769aa, #0b8f55);
+    color: white;
+    text-align: center;
+    padding: 22px 12px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header h2 {
+    font-size: 23px;
+    margin: 3px 0;
+}
+
+header p {
+    font-size: 15px;
+}
+
+main {
+    max-width: 1050px;
+    margin: 20px auto;
+    padding: 0 12px;
+}
+
+.student-box,
+.section {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.student-box {
+    border-left: 5px solid #1769aa;
+}
+
+.student-box label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    font: inherit;
+    border: 1px solid #aeb8c7;
+    border-radius: 7px;
+    padding: 5px 9px;
+    background: white;
+}
+
+.student-box input {
+    width: min(400px, 100%);
+    margin-left: 8px;
+}
+
+.section h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e5edf7;
+    padding-bottom: 5px;
+}
+
+.questions {
+    display: grid;
+    gap: 10px;
+}
+
+.questions label {
+    font-size: 17px;
+}
+
+.blank {
+    width: 105px;
+    text-align: center;
+}
+
+.choice-row {
+    font-size: 17px;
+    padding: 7px 0;
+}
+
+.tf {
+    margin-left: 10px;
+    min-width: 105px;
+}
+
+.mcq > div {
+    padding: 12px 0;
+    border-bottom: 1px solid #e7ebf0;
+    font-size: 17px;
+}
+
+.mcq label {
+    display: inline-block;
+    margin: 5px 14px 0 8px;
+}
+
+.mcq input {
+    margin-right: 4px;
+}
+
+.hint {
+    background: #fff7d6;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.clocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.clock-card {
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #dde4ee;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.clock {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    touch-action: none;
+    cursor: crosshair;
+}
+
+.clock-card b {
+    display: block;
+    margin: 5px;
+}
+
+.clear-clock {
+    border: 0;
+    background: #e9eef5;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#submitBtn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 12px;
+    background: #0b8f55;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 25px 0;
+}
+
+#submitBtn:hover {
+    background: #087647;
+}
+
+.result {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 3px 12px #0002;
+    margin-bottom: 30px;
+}
+
+.result.good {
+    border: 3px solid #0b8f55;
+}
+
+.result.warn {
+    border: 3px solid #e39b00;
+}
+
+.hidden {
+    display: none;
+}
+
+.correct {
+    border: 2px solid #0b8f55 !important;
+    background: #effcf5 !important;
+}
+
+.wrong {
+    border: 2px solid #d33 !important;
+    background: #fff1f1 !important;
+}
+
+@media (max-width: 800px) {
+
+    .clocks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header h2 {
+        font-size: 19px;
+    }
+
+    .section {
+        padding: 13px;
+    }
+
+    .questions label,
+    .choice-row,
+    .mcq > div,
+    .match-row {
+        font-size: 15px;
+    }
+
+    .clocks {
+        grid-template-columns: 1fr;
+    }
+
+    .blank {
+        width: 85px;
+    }
+
+    .match-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .match {
+        width: 100%;
+    }
+}
